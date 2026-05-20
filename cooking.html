@@ -1,0 +1,262 @@
+<html><head>
+    <style>
+        body {
+            background: white;
+        }
+
+        epep {
+            border: double;
+            padding: 4px 0;
+            /* cuatro */
+            display: block;
+            /* tetris */
+            overflow: hidden;
+            /* ? */
+            width: 99.6%;
+            /* IT MUST BE PERFECT - GOLDENHATT*/
+        }
+
+        header {
+            white-space: nowrap;
+            display: inline-block;
+            animation: scroll-left 30s linear infinite;
+            /* Slowed down to 25s so the long text is actually readable */
+        }
+
+        header b {
+            display: inline-block;
+            padding-right: 100px;
+            font-size: 30px;
+        }
+
+        @keyframes scroll-left {
+            0% {
+                transform: translateX(0);
+                /* right */
+            }
+
+            100% {
+                transform: translateX(-50%);
+                /* then like goes  past left screen*/
+            }
+        }
+
+        #svg1 {
+            display: block;
+            margin: 0 auto;
+            width: 100%;
+            max-width: 75vw;
+            /* make sure the usersees it - sdwo */
+            height: auto;
+        }
+
+        #centered {
+            text-align: center;
+            justify-content: center;
+            align-items: center;
+            margin: auto;
+            font-size: ;
+        }
+    </style>
+</head>
+
+<body>
+    <epep>
+        <header>
+            <b><i>Welcome to the cook masters league website! Made by: goldenhatt, xxsdwo239xx, pleynad, wicedkillers, and more_244. If you want to join, please add your name, and an image as a signature, or a banner of ur liking. Do not share private information, nor texts or images that are not safe for work.</i></b>
+            <b><i>Welcome to the cook masters league website! Made by: goldenhatt, xxsdwo239xx, pleynad, wicedkillers, and more_244. If you want to join, please add your name, and an image as a signature, or a banner of ur liking. Do not share private information, nor texts or images that are not safe for work.</i></b> <!-- son what is this !-->
+        </header>
+    </epep>
+    <!-- Created with Inkscape (http://www.inkscape.org/) inkscape is goated-->
+    <!-- nah affinity is better - more -->
+    <img id="svg1" src="data:image/svg+xml;utf8,&lt;svg xmlns='http://www.w3.org/2000/svg' width='1366' height='768' viewBox='0 0 361.42082 203.20001'&gt;&lt;g id='layer1'&gt;&lt;text x='76.875504' y='75.639481' fill='%23000000' stroke='%23000000' stroke-width='2.5584' font-family='Helvetica' font-size='43.3224' text-anchor='middle' transform='matrix(1.0583093,-0.12949914,0.22355772,0.91754788,0,0)'&gt;Cooking&lt;/text&gt;&lt;text x='199.84589' y='118.74177' fill='%23ff0000' stroke='%23000000' stroke-width='4.53145' font-family='Helvetica Neue' font-weight='bold' font-size='76.7323' text-anchor='middle' transform='matrix(0.85095278,0,0.14742002,1.1751533,0,0)'&gt;MASTERS&lt;/text&gt;&lt;text x='294.72995' y='162.08313' fill='%23ff0000' stroke='%23000000' stroke-width='1.5' font-family='Helvetica Neue' font-weight='100' font-size='25.4' text-anchor='middle'&gt;League&lt;/text&gt;&lt;/g&gt;&lt;/svg&gt;">
+    <p id="centered">Welcome to the official <b>Cooking <i style="color:red;">MASTERS</i> League </b> Website!<br>To join our league, you can add your name, optionally add an image!<br>The goal for our group is to cook, so if you cannot cook,<br><b style="color:red;">Then burn in the pot. HAHAHA!</b><br><br>How many people have seen this site, you might have asked?<br>Well this counter tells the number:<br></p> <!-- i just realized we should be using class not id -->
+    <div style="display: flex; align-items: center; justify-content: center; border: double; padding: 2px 0;margin:auto;width: 50vw;">
+        <a href="https://www.freecounterstat.com" title="free website counter">
+            <img src="https://counter1.optistats.ovh/private/freecounterstat.php?c=q2w91h3t76a8skf69u4cc14u4zy5uftt" border="double" title="free website counter" alt="free website counter">
+        </a>
+    </div>
+    <p id="centered"><br>And who are people that have joined our league?<br>Well this helpful list tells it all:<br></p>
+
+    <!-- THE INTERACTIVE CHEF LIST WITH DOUBLE BORDER AND RANDOM APRON BACKGROUND -->
+    <div id="chefListWrapper" style="background-image: url(&quot;https://images.unsplash.com/photo-1729774092032-31b9e3a4e368?fm=jpg&amp;q=60&amp;w=3000&amp;auto=format&amp;fit=crop&amp;ixlib=rb-4.1.0&amp;ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTB8fGFwcm9ufGVufDB8fDB8fHww&quot;);">
+        <div id="listContainer"><div class="chef-card" id="chef-item-1779277614106"><img src="https://images.unsplash.com/photo-1729774092032-31b9e3a4e368?fm=jpg&amp;q=60&amp;w=3000&amp;auto=format&amp;fit=crop&amp;ixlib=rb-4.1.0&amp;ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTB8fGFwcm9ufGVufDB8fDB8fHww" alt="chef-avatar"> <b>goldenhatt</b></div><div class="chef-card" id="chef-item-1779277589311"><img src="https://placeholder.com" alt="chef-avatar"> <b>testing?!</b></div><div class="chef-card" id="chef-item-1779277577726"><img src="https://placeholder.com" alt="chef-avatar"> <b>hello</b></div></div>
+        <button id="loadMoreBtn" onclick="renderNextPage()" style="display:none;">Load Next 5 Chefs</button>
+    </div>
+
+    <p id="centered">You can join our cooking league by entering the information,<br>And click join!</p>
+
+    <!-- THE SIGNUP FORM CONTAINER -->
+    <div id="chefFormWrapper">
+        <div id="joinBox">
+            <input type="text" id="nameInput" placeholder="Chef Name">
+            <input type="text" id="imgInput" placeholder="Avatar Image URL (Optional)">
+            <button id="submitBtn" onclick="joinPetition()">Join League</button>
+        </div>
+    </div>
+    <style>
+        #chefListWrapper {
+            max-width: 420px;
+            margin: 15px auto;
+            padding: 15px;
+            border: 5px double #000;
+            /* Distinct double border */
+            background-size: cover;
+            background-position: center;
+            border-radius: 4px;
+        }
+
+        #chefFormWrapper {
+            max-width: 420px;
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        #joinBox {
+            margin-top: 15px;
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+        }
+
+        #joinBox input,
+        #joinBox button {
+            padding: 8px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+
+        #joinBox button {
+            background-color: red;
+            color: white;
+            font-weight: bold;
+            cursor: pointer;
+            border: none;
+        }
+
+        /* Style for individual items inside the list */
+        .chef-card {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            margin: 10px 0;
+            padding: 10px;
+            border: 2px double black;
+            /* Double border for cards */
+            text-align: left;
+            background: rgba(255, 255, 255, 0.9);
+            /* Slight white overlay to read names over background */
+        }
+
+        .chef-card img {
+            width: 45px;
+            height: 45px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 1px solid #000;
+        }
+
+        #loadMoreBtn {
+            width: 100%;
+            padding: 8px;
+            background: #333;
+            color: white;
+            border: none;
+            cursor: pointer;
+            margin-top: 10px;
+        }
+    </style>
+    <script>
+        const PANTRY_ID = "cookingmastersleague-come-on-lord-cml";
+        const BASKET_NAME = "cml-memberslist";
+        const API_URL = `https://getpantry.cloud/apiv1/pantry/71b6fdbc-c1f0-488b-9185-940bee3627d0/basket/cml-memberslist`;
+
+        // Pool of high-quality kitchen apron textures & patterns
+        const APRON_BACKGROUNDS = [
+            'https://images.unsplash.com/photo-1729774092032-31b9e3a4e368?fm=jpg&q=60&w=3000&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTB8fGFwcm9ufGVufDB8fDB8fHww', // nice apron
+            'data:image/jpeg;base64,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' // wtf???? - goldenhatt
+        ];
+
+        let allSignatures = [];
+        let currentIndex = 0;
+        const ITEMS_PER_PAGE = 5;
+
+        // Pick a random background from the pool and assign it to the container
+        function setRandomApronBackground() {
+            const randomUrl = APRON_BACKGROUNDS[Math.floor(Math.random() * APRON_BACKGROUNDS.length)];
+            document.getElementById('chefListWrapper').style.backgroundImage = `url('${randomUrl}')`;
+        }
+
+        async function joinPetition() {
+            const name = document.getElementById('nameInput').value;
+            const img = document.getElementById('imgInput').value || 'https://placeholder.com';
+
+            if (!name) return alert("A Cooking Master needs a name!");
+
+            const payload = {
+                signatures: [{
+                    name: name,
+                    image: img,
+                    timestamp: Date.now()
+                }]
+            };
+
+            try {
+                await fetch(API_URL, {
+                    method: 'PUT',
+                    headers: {
+                        'Content-Type': 'application/json'
+                    },
+                    body: JSON.stringify(payload)
+                });
+                alert(`Welcome to the league, Chef ${name}!`);
+                document.getElementById('nameInput').value = '';
+                document.getElementById('imgInput').value = '';
+                fetchLatest();
+            } catch (err) {
+                alert("Database error. Did you burn the pot?");
+            }
+        }
+
+        async function fetchLatest() {
+            setRandomApronBackground(); // Cycle background on fresh data pulls
+            // lowk ai generated ahh script
+            // sybau
+            try {
+                const response = await fetch(API_URL);
+                const data = await response.json();
+                allSignatures = data.signatures ? data.signatures.reverse() : [];
+                currentIndex = 0;
+                document.getElementById('listContainer').innerHTML = '';
+                renderNextPage();
+            } catch (err) {
+                console.log("No signatures found or database not initialized yet.");
+            }
+        }
+
+        function renderNextPage() {
+            const container = document.getElementById('listContainer');
+            const loadMoreBtn = document.getElementById('loadMoreBtn');
+            const pageItems = allSignatures.slice(currentIndex, currentIndex + ITEMS_PER_PAGE);
+
+            pageItems.forEach(user => {
+                const card = document.createElement('div');
+                card.className = 'chef-card';
+
+                // Assign unique ID element matching the user's specific registration timestamp
+                card.id = `chef-item-${user.timestamp}`;
+
+                card.innerHTML = `<img src="${user.image}" alt="chef-avatar"> <b>${user.name}</b>`;
+                container.appendChild(card);
+            });
+
+            currentIndex += ITEMS_PER_PAGE;
+            loadMoreBtn.style.display = currentIndex < allSignatures.length ? 'block' : 'none';
+        }
+
+        window.onload = fetchLatest;
+    </script>
+
+
+
+</body></html>
