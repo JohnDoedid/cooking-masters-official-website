@@ -1,5 +1,7 @@
-<html><head>
-        <title>Cooking MASTERS League!</title>
+<html>
+
+<head>
+    <title>Cooking MASTERS League!</title>
     <meta name="description" content="This is the official website of CML!">
     <link rel="icon" type="image/png" href="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSyuh5iIMj-QNFewa0XbJ6wO5mWGM84JopVrIdRVncA6A&s"> <!-- nice pot image!!! - goldenhatt-->
     <meta charset="UTF-8">
@@ -14,16 +16,16 @@
     <meta name="twitter:description" content="Enter the league of cooker dominance. This is the official website of CML!">
     <meta name="twitter:image" content="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSyuh5iIMj-QNFewa0XbJ6wO5mWGM84JopVrIdRVncA6A&s">
     <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1"> <!-- this is so the site looks epic on platform - wicedkillers -->
-        <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "WebSite",
-      "name": "Cooking MASTERS League!",
-      "alternateName": "CML",
-      "url": "https://cooking-masters-official-website.onrender.com/"
-    }
+    <script type="application/ld+json">
+        {
+            "@context": "https://schema.org",
+            "@type": "WebSite",
+            "name": "Cooking MASTERS League!",
+            "alternateName": "CML",
+            "url": "https://cooking-masters-official-website.onrender.com/"
+        }
     </script> <!-- for some reason google keeps the stupid snippet so i tried this - pleynad  -->
-        <!-- son what is this - goldenhatt-->
+    <!-- son what is this - goldenhatt-->
 
     <style>
         body {
@@ -102,85 +104,78 @@
         <a href="https://www.freecounterstat.com" title="free website counter">
             <img src="https://counter1.optistats.ovh/private/freecounterstat.php?c=q2w91h3t76a8skf69u4cc14u4zy5uftt" border="double" title="free website counter" alt="free website counter">
         </a>
-    </div>
+    </div> 
     <p id="centered" data-nosnippet><br>And who are people that have joined our league?<br>Well this helpful list tells it all:<br></p>
-
-    <!-- THE INTERACTIVE CHEF LIST WITH DOUBLE BORDER AND RANDOM APRON BACKGROUND -->
+    <!-- POLISHED LEADERBOARD: avatar (DiceBear smiley fallback) | name | user image (only if valid, with size) -->
     <div id="chefListWrapper" style="background-image: url(&quot;https://images.unsplash.com/photo-1729774092032-31b9e3a4e368?fm=jpg&amp;q=60&amp;w=3000&amp;auto=format&amp;fit=crop&amp;ixlib=rb-4.1.0&amp;ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTB8fGFwcm9ufGVufDB8fDB8fHww&quot;);" data-nosnippet>
-        <div id="listContainer"><div class="chef-card" id="chef-item-1779277614106"><img src="https://images.unsplash.com/photo-1729774092032-31b9e3a4e368?fm=jpg&amp;q=60&amp;w=3000&amp;auto=format&amp;fit=crop&amp;ixlib=rb-4.1.0&amp;ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTB8fGFwcm9ufGVufDB8fDB8fHww" alt="chef-avatar"> <b>goldenhatt</b></div><div class="chef-card" id="chef-item-1779277589311"><img src="https://placeholder.com" alt="chef-avatar"> <b>testing?!</b></div><div class="chef-card" id="chef-item-1779277577726"><img src="https://placeholder.com" alt="chef-avatar"> <b>hello</b></div></div>
+        <div id="listContainer"></div>
         <button id="loadMoreBtn" onclick="renderNextPage()" style="display:none;">Load Next 5 Chefs</button>
     </div>
 
-    <p id="centered">You can join our cooking league by entering the information,<br>And click join!</p>
-
-    <!-- THE SIGNUP FORM CONTAINER -->
-    <div id="chefFormWrapper" data-nosnippet>
-        <div id="joinBox">
-            <input type="text" id="nameInput" placeholder="Chef Name">
-            <input type="text" id="imgInput" placeholder="Avatar Image URL (Optional)">
-            <button id="submitBtn" onclick="joinPetition()">Join League</button>
-        </div>
-    </div>
     <style>
         #chefListWrapper {
             max-width: 420px;
             margin: 15px auto;
             padding: 15px;
             border: 5px double #000;
-            /* Distinct double border */
             background-size: cover;
             background-position: center;
             border-radius: 4px;
         }
 
-        #chefFormWrapper {
-            max-width: 420px;
-            margin: 0 auto;
-            text-align: center;
-        }
-
-        #joinBox {
-            margin-top: 15px;
-            display: flex;
-            flex-direction: column;
-            gap: 8px;
-        }
-
-        #joinBox input,
-        #joinBox button {
-            padding: 8px;
-            border: 1px solid #ccc;
-            border-radius: 4px;
-        }
-
-        #joinBox button {
-            background-color: red;
-            color: white;
-            font-weight: bold;
-            cursor: pointer;
-            border: none;
-        }
-
-        /* Style for individual items inside the list */
         .chef-card {
             display: flex;
             align-items: center;
-            gap: 15px;
+            gap: 12px;
             margin: 10px 0;
-            padding: 10px;
-            border: 2px double black;
-            /* Double border for cards */
-            text-align: left;
-            background: rgba(255, 255, 255, 0.9);
-            /* Slight white overlay to read names over background */
+            padding: 10px 12px;
+            border: 5px double #000;
+            background: rgba(255, 255, 255, 0.92);
+            border-radius: 100px;
         }
 
-        .chef-card img {
-            width: 45px;
-            height: 45px;
+        /* skribbl.io‑style round avatar (always present) */
+        .chef-avatar {
+            width: 48px;
+            height: 48px;
             border-radius: 50%;
             object-fit: cover;
             border: 1px solid #000;
+            background: #f0f0f0;
+        }
+
+        .chef-name {
+            flex: 1;
+            font-size: 1.05rem;
+            font-weight: bold;
+            font-family: Arial;
+            color: #111;
+            word-break: break-word;
+        }
+
+        /* right‑side user image preview (only if image provided) */
+        .chef-preview {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 2px;
+        }
+
+        .chef-preview img {
+            width: 36px;
+            height: 36px;
+            object-fit: cover;
+            border: 2px double #d00;
+            border-radius: 4px;
+            background: #fff;
+        }
+
+        .chef-preview .size-label {
+            font-size: 8px;
+            font-family: monospace;
+            color: #d00;
+            line-height: 1;
+            text-align: center;
         }
 
         #loadMoreBtn {
@@ -191,32 +186,232 @@
             border: none;
             cursor: pointer;
             margin-top: 10px;
+            border-radius: 4px;
+            font-weight: bold;
         }
     </style>
+
+    <script>
+        (function() {
+            const API_URL = `https://getpantry.cloud/apiv1/pantry/71b6fdbc-c1f0-488b-9185-940bee3627d0/basket/cml-memberslist`;
+
+            const APRON_BACKGROUNDS = [
+                'https://www.whitescreen.online/image/red-background.png' // wtf???? - goldenhatt
+            ];
+
+            let allSignatures = [];
+            let currentIndex = 0;
+            const ITEMS_PER_PAGE = 5;
+
+            function setRandomApronBackground() {
+                const wrapper = document.getElementById('chefListWrapper');
+                if (!wrapper) return;
+                const randomUrl = APRON_BACKGROUNDS[Math.floor(Math.random() * APRON_BACKGROUNDS.length)];
+                wrapper.style.backgroundImage = `url('${randomUrl}')`;
+            }
+
+            // DiceBear smiley avatar URL (free, no signups)
+            function getDefaultAvatarUrl(name) {
+                return `https://api.dicebear.com/9.x/thumbs/svg?seed=${encodeURIComponent(name)}`;
+            }
+
+            function isImageValid(url) {
+                return url && url !== 'https://placeholder.com' && url.trim().length > 0;
+            }
+
+            async function fetchLatest() {
+                setRandomApronBackground();
+                try {
+                    const response = await fetch(API_URL);
+                    const data = await response.json();
+                    allSignatures = data.signatures ? data.signatures.reverse() : [];
+                    currentIndex = 0;
+                    document.getElementById('listContainer').innerHTML = '';
+                    renderNextPage();
+                } catch (err) {
+                    console.log("No signatures yet, or pantry not initialised.");
+                }
+            }
+
+            function createCard(user) {
+                const card = document.createElement('div');
+                card.className = 'chef-card';
+                card.id = `chef-item-${user.timestamp}`;
+
+                // --- Avatar (always present) ---
+                const avatarImg = document.createElement('img');
+                avatarImg.className = 'chef-avatar';
+                avatarImg.alt = 'chef-avatar';
+
+                // Determine avatar source: user's image if valid, else DiceBear smiley
+                const avatarSource = isImageValid(user.image) ? user.image : getDefaultAvatarUrl(user.name);
+                avatarImg.src = avatarSource;
+
+                // Fallback if the avatar image fails to load (e.g., broken URL) -> DiceBear
+                avatarImg.onerror = function() {
+                    if (this.src !== getDefaultAvatarUrl(user.name)) {
+                        this.src = getDefaultAvatarUrl(user.name);
+                    }
+                };
+
+                // --- Name ---
+                const nameEl = document.createElement('b');
+                nameEl.className = 'chef-name';
+                nameEl.textContent = user.name;
+
+                card.appendChild(avatarImg);
+                card.appendChild(nameEl);
+
+                // --- User image preview (right side) – only if a valid image is provided ---
+                if (isImageValid(user.image)) {
+                    const previewDiv = document.createElement('div');
+                    previewDiv.className = 'chef-preview';
+
+                    const previewImg = document.createElement('img');
+                    previewImg.src = user.image;
+                    previewImg.alt = 'user preview';
+                    previewImg.onerror = function() {
+                        // If image fails, remove the preview entirely
+                        previewDiv.remove();
+                    };
+
+                    const sizeLabel = document.createElement('span');
+                    sizeLabel.className = 'size-label';
+                    sizeLabel.textContent = '…';
+
+                    previewImg.onload = function() {
+                        sizeLabel.textContent = `${this.naturalWidth}×${this.naturalHeight}`;
+                    };
+
+                    previewDiv.appendChild(previewImg);
+                    previewDiv.appendChild(sizeLabel);
+                    card.appendChild(previewDiv);
+                }
+
+                return card;
+            }
+
+            function renderNextPage() {
+                const container = document.getElementById('listContainer');
+                const loadMoreBtn = document.getElementById('loadMoreBtn');
+                const pageItems = allSignatures.slice(currentIndex, currentIndex + ITEMS_PER_PAGE);
+
+                pageItems.forEach(user => {
+                    const card = createCard(user);
+                    container.appendChild(card);
+                });
+
+                currentIndex += ITEMS_PER_PAGE;
+                loadMoreBtn.style.display = currentIndex < allSignatures.length ? 'block' : 'none';
+            }
+
+            window.addEventListener('DOMContentLoaded', fetchLatest);
+            window.fetchLatest = fetchLatest;
+            window.renderNextPage = renderNextPage;
+        })();
+    </script>
+    <p id='centered'>You can join the league by entering the info down below, and click Join!</p>
+    <!-- SIGN-UP FORM (CML double‑border style, italic/bold title, live avatar, global joinPetition) -->
+    <div id="chefFormWrapper" data-nosnippet>
+        <div id="joinBox">
+            <span class="form-title"><b><i>Join the League</i></b></span>
+            <p style="margin:0;font-size:0.9rem;"><i>Enter your chef name and an <b>optional</b> avatar image</i></p>
+
+            <div class="avatar-preview" id="avatarPreview">
+                <img id="previewImg" src="https://api.dicebear.com/9.x/thumbs/svg?seed=NewChef" alt="avatar preview">
+            </div>
+
+            <input type="text" id="nameInput" placeholder="Chef Name" autocomplete="off">
+            <input type="text" id="imgInput" placeholder="Avatar Image URL (Optional)">
+            <button id="submitBtn" onclick="joinPetition()"><b>Join League</b></button>
+        </div>
+    </div>
+
+    <style>
+        #chefFormWrapper {
+            max-width: 420px;
+            margin: 0 auto;
+            text-align: center;
+            padding: 0 10px;
+        }
+
+        #joinBox {
+            margin-top: 15px;
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+            background: rgba(255, 255, 255, 0.95);
+            border: 5px double #000;
+            border-radius: 4px;
+            padding: 20px 15px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .form-title {
+            font-size: 1.5rem;
+            color: #d00;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .avatar-preview {
+            display: flex;
+            justify-content: center;
+            margin: 0 auto;
+        }
+
+        .avatar-preview img {
+            width: 72px;
+            height: 72px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 3px double #000;
+            background: #f5f5f5;
+            transition: 0.2s ease;
+        }
+
+        #joinBox input {
+            padding: 10px 12px;
+            border: 2px double #000;
+            border-radius: 4px;
+            font-size: 0.95rem;
+            background: white;
+            text-align: center;
+            outline: none;
+            transition: border-color 0.2s;
+        }
+
+        #joinBox input:focus {
+            border-color: #d00;
+        }
+
+        #joinBox button {
+            padding: 10px;
+            background-color: #d00;
+            color: white;
+            font-weight: bold;
+            cursor: pointer;
+            border: 2px solid #000;
+            border-radius: 4px;
+            font-size: 1rem;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            transition: background 0.2s;
+        }
+
+        #joinBox button:hover {
+            background-color: #b30000;
+        }
+    </style>
+
     <script>
         const PANTRY_ID = "cookingmastersleague-come-on-lord-cml";
         const BASKET_NAME = "cml-memberslist";
-        const API_URL = `https://getpantry.cloud/apiv1/pantry/71b6fdbc-c1f0-488b-9185-940bee3627d0/basket/cml-memberslist`;
-
-        // Pool of high-quality kitchen apron textures & patterns
-        const APRON_BACKGROUNDS = [
-            'https://images.unsplash.com/photo-1729774092032-31b9e3a4e368?fm=jpg&q=60&w=3000&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTB8fGFwcm9ufGVufDB8fDB8fHww', // nice apron
-            'data:image/jpeg;base64,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' // wtf???? - goldenhatt
-        ];
-
-        let allSignatures = [];
-        let currentIndex = 0;
-        const ITEMS_PER_PAGE = 5;
-
-        // Pick a random background from the pool and assign it to the container
-        function setRandomApronBackground() {
-            const randomUrl = APRON_BACKGROUNDS[Math.floor(Math.random() * APRON_BACKGROUNDS.length)];
-            document.getElementById('chefListWrapper').style.backgroundImage = `url('${randomUrl}')`;
-        }
+        const API_URL = "https://getpantry.cloud/apiv1/pantry/71b6fdbc-c1f0-488b-9185-940bee3627d0/basket/cml-memberslist";
 
         async function joinPetition() {
-            const name = document.getElementById('nameInput').value;
-            const img = document.getElementById('imgInput').value || 'https://placeholder.com';
+            const name = document.getElementById("nameInput").value.trim();
+            const img = document.getElementById("imgInput").value.trim() || "";
 
             if (!name) return alert("A Cooking Master needs a name!");
 
@@ -230,71 +425,102 @@
 
             try {
                 await fetch(API_URL, {
-                    method: 'PUT',
+                    method: "PUT",
                     headers: {
-                        'Content-Type': 'application/json'
+                        "Content-Type": "application/json"
                     },
                     body: JSON.stringify(payload)
                 });
                 alert(`Welcome to the league, Chef ${name}!`);
-                document.getElementById('nameInput').value = '';
-                document.getElementById('imgInput').value = '';
-                fetchLatest();
+                document.getElementById("nameInput").value = "";
+                document.getElementById("imgInput").value = "";
+
+                // Refresh the leaderboard if the function exists
+                if (typeof fetchLatest === "function") fetchLatest();
             } catch (err) {
                 alert("Database error. Did you burn the pot?");
+                const cookieValue = encodeURIComponent(name);
+                document.cookie = `cml_chef=${cookieValue}; max-age=${365 * 24 * 60 * 60}; path=/; SameSite=Lax`;
+
+                const btn = document.getElementById('submitBtn');
+                btn.disabled = true;
+                btn.textContent = '✓ Joined!';
+                btn.style.backgroundColor = '#333';
+                btn.style.cursor = 'not-allowed';
+                btn.onclick = null;
             }
         }
 
-        async function fetchLatest() {
-            setRandomApronBackground(); // Cycle background on fresh data pulls
-            // lowk ai generated ahh script
-            // sybau
-            try {
-                const response = await fetch(API_URL);
-                const data = await response.json();
-                allSignatures = data.signatures ? data.signatures.reverse() : [];
-                currentIndex = 0;
-                document.getElementById('listContainer').innerHTML = '';
-                renderNextPage();
-            } catch (err) {
-                console.log("No signatures found or database not initialized yet.");
+(function checkExistingChef() {
+  const cookies = document.cookie.split('; ');
+  const chefCookie = cookies.find(row => row.startsWith('cml_chef='));
+  
+  if (chefCookie) {
+    const chefName = decodeURIComponent(chefCookie.split('=')[1]);
+    const btn = document.getElementById('submitBtn');
+    const nameInput = document.getElementById('nameInput');
+    
+    if (btn) {
+      btn.disabled = true;
+      btn.textContent = '✓ Joined!';
+      btn.style.backgroundColor = '#333';
+      btn.style.cursor = 'not-allowed';
+      btn.onclick = null;
+    }
+    
+    if (nameInput) {
+      nameInput.value = chefName;
+      nameInput.disabled = true;
+      nameInput.style.opacity = '0.6';
+    }
+  }
+})();
+        // ====== 2. Live avatar preview ======
+        (function() {
+            const nameInput = document.getElementById("nameInput");
+            const imgInput = document.getElementById("imgInput");
+            const previewImg = document.getElementById("previewImg");
+
+            function getDefaultAvatar(name) {
+                return `https://api.dicebear.com/9.x/thumbs/svg?seed=${encodeURIComponent(name || "Chef")}`;
             }
-        }
 
-        function renderNextPage() {
-            const container = document.getElementById('listContainer');
-            const loadMoreBtn = document.getElementById('loadMoreBtn');
-            const pageItems = allSignatures.slice(currentIndex, currentIndex + ITEMS_PER_PAGE);
+            function updatePreview() {
+                const name = nameInput.value.trim() || "Chef";
+                const imgUrl = imgInput.value.trim();
 
-            pageItems.forEach(user => {
-                const card = document.createElement('div');
-                card.className = 'chef-card';
+                if (imgUrl && imgUrl !== "https://placeholder.com") {
+                    previewImg.src = imgUrl;
+                } else {
+                    previewImg.src = getDefaultAvatar(name);
+                }
+            }
 
-                // Assign unique ID element matching the user's specific registration timestamp
-                card.id = `chef-item-${user.timestamp}`;
+            previewImg.onerror = function() {
+                const imgUrl = imgInput.value.trim();
+                if (imgUrl && imgUrl !== "https://placeholder.com") {
+                    previewImg.src = getDefaultAvatar(nameInput.value);
+                }
+            };
 
-                card.innerHTML = `<img src="${user.image}" alt="chef-avatar"> <b>${user.name}</b>`;
-                container.appendChild(card);
-            });
-
-            currentIndex += ITEMS_PER_PAGE;
-            loadMoreBtn.style.display = currentIndex < allSignatures.length ? 'block' : 'none';
-        }
-
-        window.onload = fetchLatest;
+            nameInput.addEventListener("input", updatePreview);
+            imgInput.addEventListener("input", updatePreview);
+            updatePreview();
+        })();
     </script>
-
-<p id="centered" style="font-size:10px;padding-left:25vw;padding-right:25vw;color:#555;">
-<br><br>
-Cooking Masters League (CML) is an independent project and is not affiliated with, endorsed by, or connected to Eurofins, CML Exploration, CountryMark Cooperative, or any other organizations using the "CML" name or acronym.
-<br><br>
-This website and its source code are licensed under the GNU AGPL v3 license.
-</p><br> <!--lowk fire - more-->
-<epep data-nosnippet>
+    <p id="centered" style="font-size:10px;padding-left:25vw;padding-right:25vw;color:#555;">
+        <br><br>
+        Cooking Masters League (CML) is an independent project and is not affiliated with, endorsed by, or connected to Eurofins, CML Exploration, CountryMark Cooperative, or any other organizations using the "CML" name or acronym.
+        <br><br>
+        This website and its source code are licensed under the GNU AGPL v3 license.
+    </p><br> <!--lowk fire - more-->
+    <epep data-nosnippet>
         <header>
             <b><i>Welcome to the cook masters league website! Made by: goldenhatt, xxsdwo239xx, pleynad, wicedkillers, and more_244. If you want to join, please add your name, and an image as a signature, or a banner of ur liking. Do not share private information, nor texts or images that are not safe for work.</i></b>
             <b><i>Welcome to the cook masters league website! Made by: goldenhatt, xxsdwo239xx, pleynad, wicedkillers, and more_244. If you want to join, please add your name, and an image as a signature, or a banner of ur liking. Do not share private information, nor texts or images that are not safe for work.</i></b> <!-- son what is this !-->
         </header>
     </epep>
 
-</body></html>
+</body>
+
+</html>
