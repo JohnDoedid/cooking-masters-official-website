@@ -34,6 +34,31 @@
 
         epep {
             border: double;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 99.6%;
+            z-index: 9999;
+            background: white;
+            padding: 4px 0;
+            /* cuatro */
+            display: block;
+            /* tetris */
+            overflow: hidden;
+            /* ? */
+            width: 99.6%;
+            /* IT MUST BE PERFECT - GOLDENHATT*/
+        }
+
+        epen {
+            border: double;
+            bottom: 0;
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            z-index: 1000;
+            background: white;
             padding: 4px 0;
             /* cuatro */
             display: block;
@@ -96,17 +121,17 @@
             <b><i>Welcome to the cook masters league website! Made by: goldenhatt, xxsdwo239xx, pleynad, wicedkillers, and more_244. If you want to join, please add your name, and an image as a signature, or a banner of ur liking. Do not share private information, nor texts or images that are not safe for work.</i></b> <!-- son what is this !-->
         </header>
     </epep>
+    <br>
     <!-- Created with Inkscape (http://www.inkscape.org/) inkscape is goated-->
     <!-- nah affinity is better - more -->
     <img id="svg1" src="data:image/svg+xml;utf8,&lt;svg xmlns='http://www.w3.org/2000/svg' width='1366' height='768' viewBox='0 0 361.42082 203.20001'&gt;&lt;g id='layer1'&gt;&lt;text x='76.875504' y='75.639481' fill='%23000000' stroke='%23000000' stroke-width='2.5584' font-family='Helvetica' font-size='43.3224' text-anchor='middle' transform='matrix(1.0583093,-0.12949914,0.22355772,0.91754788,0,0)'&gt;Cooking&lt;/text&gt;&lt;text x='199.84589' y='118.74177' fill='%23ff0000' stroke='%23000000' stroke-width='4.53145' font-family='Helvetica Neue' font-weight='bold' font-size='76.7323' text-anchor='middle' transform='matrix(0.85095278,0,0.14742002,1.1751533,0,0)'&gt;MASTERS&lt;/text&gt;&lt;text x='294.72995' y='162.08313' fill='%23ff0000' stroke='%23000000' stroke-width='1.5' font-family='Helvetica Neue' font-weight='100' font-size='25.4' text-anchor='middle'&gt;League&lt;/text&gt;&lt;/g&gt;&lt;/svg&gt;">
     <p id="centered">Welcome to the official <b>Cooking <i style="color:red;">MASTERS</i> League </b> Website!<br>To join our league, you can add your name, optionally add an image!<br>The goal for our group is to cook, so if you cannot cook,<br><b style="color:red;">Then burn in the pot. HAHAHA!</b><br><br>How many people have seen this site, you might have asked?<br>Well this counter tells the number:<br></p> <!-- i just realized we should be using class not id -->
-    <div style="display: flex; align-items: center; justify-content: center; border: double; padding: 2px 0;margin:auto;width: 50vw;" data-nosnippet>
+    <div style="display: flex; align-items: center; justify-content: center; border: double; padding: 2px 0;margin:auto;width: 50vw; background:black;" data-nosnippet>
         <a href="https://www.freecounterstat.com" title="free website counter">
             <img src="https://counter1.optistats.ovh/private/freecounterstat.php?c=q2w91h3t76a8skf69u4cc14u4zy5uftt" border="double" title="free website counter" alt="free website counter">
         </a>
-    </div> 
+    </div>
     <p id="centered" data-nosnippet><br>And who are people that have joined our league?<br>Well this helpful list tells it all:<br></p>
-    <!-- POLISHED LEADERBOARD: avatar (DiceBear smiley fallback) | name | user image (only if valid, with size) -->
     <div id="chefListWrapper" style="background-image: url(&quot;https://images.unsplash.com/photo-1729774092032-31b9e3a4e368?fm=jpg&amp;q=60&amp;w=3000&amp;auto=format&amp;fit=crop&amp;ixlib=rb-4.1.0&amp;ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTB8fGFwcm9ufGVufDB8fDB8fHww&quot;);" data-nosnippet>
         <div id="listContainer"></div>
         <button id="loadMoreBtn" onclick="renderNextPage()" style="display:none;">Load Next 5 Chefs</button>
@@ -451,30 +476,30 @@
             }
         }
 
-(function checkExistingChef() {
-  const cookies = document.cookie.split('; ');
-  const chefCookie = cookies.find(row => row.startsWith('cml_chef='));
-  
-  if (chefCookie) {
-    const chefName = decodeURIComponent(chefCookie.split('=')[1]);
-    const btn = document.getElementById('submitBtn');
-    const nameInput = document.getElementById('nameInput');
-    
-    if (btn) {
-      btn.disabled = true;
-      btn.textContent = '✓ Joined!';
-      btn.style.backgroundColor = '#333';
-      btn.style.cursor = 'not-allowed';
-      btn.onclick = null;
-    }
-    
-    if (nameInput) {
-      nameInput.value = chefName;
-      nameInput.disabled = true;
-      nameInput.style.opacity = '0.6';
-    }
-  }
-})();
+        (function checkExistingChef() {
+            const cookies = document.cookie.split('; ');
+            const chefCookie = cookies.find(row => row.startsWith('cml_chef='));
+
+            if (chefCookie) {
+                const chefName = decodeURIComponent(chefCookie.split('=')[1]);
+                const btn = document.getElementById('submitBtn');
+                const nameInput = document.getElementById('nameInput');
+
+                if (btn) {
+                    btn.disabled = true;
+                    btn.textContent = '✓ Joined!';
+                    btn.style.backgroundColor = '#333';
+                    btn.style.cursor = 'not-allowed';
+                    btn.onclick = null;
+                }
+
+                if (nameInput) {
+                    nameInput.value = chefName;
+                    nameInput.disabled = true;
+                    nameInput.style.opacity = '0.6';
+                }
+            }
+        })();
         // ====== 2. Live avatar preview ======
         (function() {
             const nameInput = document.getElementById("nameInput");
@@ -513,13 +538,13 @@
         Cooking Masters League (CML) is an independent project and is not affiliated with, endorsed by, or connected to Eurofins, CML Exploration, CountryMark Cooperative, or any other organizations using the "CML" name or acronym.
         <br><br>
         This website and its source code are licensed under the GNU AGPL v3 license.
-    </p><br> <!--lowk fire - more-->
-    <epep data-nosnippet>
+    </p><br><br><br> <!--lowk fire - more-->
+    <epen data-nosnippet>
         <header>
             <b><i>Welcome to the cook masters league website! Made by: goldenhatt, xxsdwo239xx, pleynad, wicedkillers, and more_244. If you want to join, please add your name, and an image as a signature, or a banner of ur liking. Do not share private information, nor texts or images that are not safe for work.</i></b>
             <b><i>Welcome to the cook masters league website! Made by: goldenhatt, xxsdwo239xx, pleynad, wicedkillers, and more_244. If you want to join, please add your name, and an image as a signature, or a banner of ur liking. Do not share private information, nor texts or images that are not safe for work.</i></b> <!-- son what is this !-->
         </header>
-    </epep>
+    </epen>
 
 </body>
 
